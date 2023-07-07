@@ -1,0 +1,63 @@
+:host {
+  display: block;
+  margin: var(--leaflet-control-margin);
+  height: calc(100vh - var(--leaflet-control-margin) * 2);
+}
+
+[part='container'] {
+  overflow: hidden;
+  height: 100%;
+  width: var(--sidebar-width);
+  transition: width 0.3s;
+}
+
+[part='inner-container'] {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  width: var(--sidebar-width);
+}
+
+[part='toggle'] {
+  display: block;
+  position: absolute;
+  appearance: none;
+  top: 50%;
+  left: calc(100% + var(--leaflet-control-margin));
+  height: 2rem;
+  width: 1rem;
+  border: var(--leaflet-control-border);
+  border-radius: var(--leaflet-control-border-radius);
+  box-shadow: var(--leaflet-control-box-shadow);
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+  transition-property: box-shadow, transform;
+  transition-duration: 0.3s;
+}
+
+[part='toggle']:hover {
+  transform: scale(1.5);
+  box-shadow: var(--leaflet-control-box-shadow-far);
+}
+
+[part='toggle']:active {
+  box-shadow: inset var(--leaflet-control-box-shadow-far);
+}
+
+#toggle:not(:checked) ~ [part='container'] {
+  width: 0;
+}
+
+[part='toggle']::after {
+  content: '<';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+#toggle:not(:checked) ~ [part='toggle']::after {
+  content: '>';
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <title>GWF Vis Host</title>
+
+  <script type="module" src="/build/gwf-vis-host.esm.js"></script>
+  <script nomodule src="/build/gwf-vis-host.js"></script>
+</head>
+
+<body>
+  <gwf-vis-host id="vis-host"></gwf-vis-host>
+  <script>
+    async function loadPlugins() {
+      try {
+        const response = await fetch('/assets/test/config.json');
+        const config = await response.json();
+        const visHost = document.querySelector('#vis-host');
+        for ([key, value] of Object.entries(config)) {
+          visHost[key] = value;
+        }
+      } catch {
+        console.warn('Fail to load plugins.')
+      }
+    }
+    loadPlugins();
+  </script>
+</body>
+
+</html>

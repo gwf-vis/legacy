@@ -1,0 +1,29 @@
+:host {
+  display: block;
+}
+
+:host([slot='top']) {
+  margin: var(--leaflet-control-margin);
+}
+
+[part='header'] {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+[part='content'] {
+  background: var(--leaflet-control-inner-background);
+  border: var(--leaflet-control-border);
+  border-radius: var(--leaflet-control-border-radius);
+  box-shadow: var(--leaflet-control-box-shadow);
+  max-width: 100%;
+}
+
+gwf-vis-host-collapse::part(header) {
+  margin: 0 var(--leaflet-control-margin);
+}
+
+gwf-vis-host-collapse::part(content) {
+  margin: var(--leaflet-control-margin);
+  margin-top: 0;
+}
