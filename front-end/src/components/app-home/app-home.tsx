@@ -138,7 +138,7 @@ export class AppHome implements ComponentInterface {
                           <ion-button title="Clear">
                             <ion-icon slot="icon-only" name="trash"></ion-icon>
                           </ion-button>
-                          <ion-button title="Documentation" href="https://github.com/river-flow-vis/docs">
+                          <ion-button title="Documentation" href="https://github.com/gwf-vis/v1-monorepo/tree/main/docs">
                             <ion-icon slot="icon-only" name="help"></ion-icon>
                           </ion-button>
                         </ion-buttons>
