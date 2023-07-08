@@ -6,7 +6,7 @@ USER node
 WORKDIR /home/node
 
 COPY package*.json /home/node/
-RUN npm i
+RUN npm ci
 
 COPY . /home/node/
 RUN npm run build
