@@ -2,6 +2,7 @@
 FROM node as build-stage
 WORKDIR /app
 COPY package*.json /app/
+COPY ../vis-host /vis-host
 RUN npm ci
 COPY . /app
 RUN npm run build
