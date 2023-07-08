@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MapView, PluginDefinitions } from "./components/gwf-vis-host/gwf-vis-host";
 export namespace Components {
     interface GwfVisHost {
+        "customVariables": { [name: string]: { rawVariables: string[]; handlerString: string } };
         "imports": { [name: string]: string };
         "plugins": PluginDefinitions;
         "preferCanvas": boolean;
@@ -70,6 +71,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface GwfVisHost {
+        "customVariables"?: { [name: string]: { rawVariables: string[]; handlerString: string } };
         "imports"?: { [name: string]: string };
         "plugins"?: PluginDefinitions;
         "preferCanvas"?: boolean;
