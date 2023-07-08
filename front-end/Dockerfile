@@ -1,8 +1,11 @@
 # Stage 0, "build-stage", based on Node.js, to build and compile the frontend
 FROM node as build-stage
 WORKDIR /app
-COPY package*.json /app/
-COPY ../vis-host /vis-host
+RUN mkdir front-end
+RUN mkdir vis-host
+COPY package*.json /app/front-end/
+COPY ../vis-host/ /app/vis-host/
+WORKDIR /app/front-end
 RUN npm ci
 COPY . /app
 RUN npm run build
