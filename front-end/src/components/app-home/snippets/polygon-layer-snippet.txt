@@ -1,0 +1,9 @@
+${1:polygons} = gwfvis.add_map_element(${2:vis_config}, 'geojson-layer')
+gwfvis.update_props(
+    ${1}, 
+    {   
+        'layerName': ${3:'layer_name'},
+        'type': ${4:'overlay'}, 
+        'dataSource': ${5:dataSource}
+    }
+)

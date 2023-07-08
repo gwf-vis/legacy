@@ -1,0 +1,10 @@
+ion-grid,
+ion-row,
+ion-col {
+  height: 100%;
+}
+
+ion-card {
+  margin: 0;
+  height: 100%;
+}

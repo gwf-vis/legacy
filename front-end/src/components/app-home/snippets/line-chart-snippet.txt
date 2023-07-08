@@ -1,0 +1,9 @@
+${1:line_chart} = gwfvis.add_${2:sidebar}_element(${3:vis_config}, 'line-chart')
+gwfvis.update_props(
+    ${1},
+    {     
+        'dataSource': ${4:dataSource},
+        'dimension': ${5:'time'},
+        'variableNames': [${6:'my_var'}]
+    }
+) 

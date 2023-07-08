@@ -1,0 +1,45 @@
+:host {
+  --indent: 1em;
+  --transition-duration: 0.3s;
+
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  padding-inline-start: var(--indent);
+}
+
+#tree-root {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  user-select: none;
+}
+
+.caret::before {
+  content: '\25B6';
+  color: black;
+  display: inline-block;
+  margin-right: 0.5em;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+li {
+  cursor: pointer;
+}

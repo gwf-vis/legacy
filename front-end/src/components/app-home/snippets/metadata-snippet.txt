@@ -1,0 +1,1 @@
+${1:metadata} = gwfvis.add_${2:sidebar}_element(${3:vis_config}, 'metadata')
