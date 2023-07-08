@@ -15,7 +15,7 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watch",
     "generate": "stencil generate",
-    "preinstall": "cd ../vis-host && npm i && npm run build"
+    "preinstall": "cd ./vis-host && npm i && npm run build"
   },
   "devDependencies": {
     "@stencil/core": "^2.17.3",
@@ -27,6 +27,6 @@
   "dependencies": {
     "@hey-web-components/monaco-editor": "^0.4.1",
     "@ionic/core": "^6.0.0",
-    "gwf-vis-host": "file:../vis-host"
+    "gwf-vis-host": "file:./vis-host"
   }
 }
