@@ -418,5 +418,10 @@ Check [here](./plugins.md).
 You can download `extras/data_processing.html` for our example simple CSV dataset processing, which let you load a formatted CSV file and convert it to `gwfvisdb` format that you can use in the system. 
 
 ### Simple CSV format
-In the CSV file, each row should stand for a specific location. For each location, it should has multiple columns. The first column should always be `id`, which should be positive integers. The `id` column is followed by metadata columns, which can be multiple columns with custom names and can contain string or HTML content. The metadata columns are followed by `lat` and `lon` columns, which should contains floating numbers. After `lat` and `lon` columns, any following columns are considered as time series columns, which can have custom column names as labels and values should be floating numbers.
+In the CSV file, each row stands for a specific location. For each location, the first column should always be `id`, which is a positive integer. The `id` column is followed by metadata columns, which can be multiple columns with custom names and can contain string or HTML content. The metadata columns are followed by `lat` and `lon` columns, which should contains floating numbers. After `lat` and `lon` columns, any following columns are considered as time series columns, which can have custom column names as labels and values should be floating numbers. Here is an example.
 
+|id|name|var1|lat|lon|2022|2023|2024|
+|---|---|---|---|---|---|----|---|
+|1|Italy|ckdjx|41.8719|12.5674|34.2|234.3|2343.5|
+|2|Canada|krgbx|56.1304|106.3468|24.2|28.1|1124.9|
+ 
